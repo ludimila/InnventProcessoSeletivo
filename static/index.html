@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>C2O</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="vendor/device-mockups/device-mockups.min.css">
+
+    <!-- Theme CSS -->
+    <link href="css/new-age.css" rel="stylesheet">
+
+    <!-- email js-->
+    <script src="js/smtp.js"></script>
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Cook 2 Order</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#download">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#features">Funcionalidades</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Fale conosco</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+  <!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+              <img src="img/cook.jpg">
+                <div class="carousel-caption">
+                    <h1><br>C2O<br>Nós iremos proporcionar a você as melhores<br> experiências gastronômicas da sua vida.</h1>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <img src="img/chef.jpg">
+                <div class="carousel-caption">
+                    <h2>Seja Como Chefe</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <img src="img/bonita.jpg">
+                <div class="carousel-caption">
+                    <h2>Seja Como Cliente</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+    
+    <section id="download" class="download bg-primary text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="section-heading">Nós aproximamos você dos melhores chefes da cidade!</h2>
+                    <p>Em breve no seu celular.</p>
+                    <div class="badges">
+                        <a class="badge-link" ><img src="img/google-play-badge.svg" alt=""></a>
+                        <a class="badge-link" ><img src="img/app-store-badge.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>Funcionalidades alinhadas com suas necessidades</h2>
+                        <p class="text-muted">Veja o que você poderá fazer com o nosso aplicativo.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <img src="img/demo-screen-1.png" class="img-responsive" alt=""> </div>
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <img src="img/cooking.png" id="insta"></i>
+                                    <h3>Leve o chefe até você</h3>
+                                    <p class="text-muted">Tenha a comodidade de comer em casa, com um chefe particular.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                     <img src="img/dinner.png" id="insta"></i>>
+                                    <h3>Jantar Especial</h3>
+                                    <p class="text-muted">Não fique horas na fila de um restaurante no dia dos namorados.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                  <img src="img/restaurant.png" id="insta"></i>
+                                    <h3>Encontre o prato</h3>
+                                    <p class="text-muted">Está com vontade de comer aquela comida tailandesa? Nós resolvemos isso pra você.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <img src="img/finding.png" id="insta"></i>                                   
+                                     <h3>Encontre o chefe</h3>
+                                    <p class="text-muted">Ficou sabendo que um chefe é maravilhoso? Ele está no C2O.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <div class="container">
+                <h2>Seja um de nós.</h2>
+                    <div class="form-group">
+                        <form action="https://formspree.io/cook2order2016@gmail.com" method="POST">
+                            <input type="text" name="name" placeholder="Nome *" class="form-control cadastro">
+                            <input type="email" name="_replyto" placeholder="Email *" class="form-control cadastro" >
+                            <input type="text" name="telefone" placeholder="Telefone *" class="form-control cadastro" >
+                            <label class="form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="chefe" name="parceiro"> Como Chefe
+                            </label>
+                             <label class="form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="cliente" name="parceiro"> Como Cliente
+                             </label> 
+                            <button id="send" type="submit" class="btn btn-outline btn-xl page-scroll">Quero fazer parte!</button> 
+                        </form>
+                    </div>
+            </div>
+        </div>
+    <div class="overlay"></div>
+    </section>
+
+    <section id="contact" class="contact bg-primary">
+        <div class="container">
+            <h2>Nós <i class="fa fa-heart"></i> comida!</h2>
+            <ul class="list-inline list-social">
+                <li class="social-facebook">
+                    <a href="https://www.facebook.com/cook2order/" ><i class="fa fa-facebook"></i></a>
+                </li>
+                 <li>
+                    <a href="https://www.instagram.com/cook2order/"><img src="img/instagram.png" id="insta"></i></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2016 Cook 2 Order. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/new-age.min.js"></script>
+
+</body>
+
+</html>
