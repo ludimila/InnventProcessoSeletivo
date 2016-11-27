@@ -101,11 +101,12 @@
       <section id="dolar" class="download bg-primary text-center">
          <div class="container">
             <div class="row">
-            <h2>{{converted_real}}</h2>
+            <!-- <h2>{{converted_real}}</h2>
             <h2>{{converted_euro}}</h2>
-            <h2>{{converted_peso}}</h2>
-
-
+            <h2>{{converted_peso}}</h2> -->
+            {% for real in converted_real %}
+               <span onclick=console.log({{ real|safe }});>{{ real }}</span>
+            {% endfor %}
             </div>
          </div>
       </section>
@@ -114,6 +115,7 @@
       <section id="euro" class="features">
          <div class="container">
             <div class="row">
+            <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
             </div>
          </div>
       </section>

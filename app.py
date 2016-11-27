@@ -30,31 +30,33 @@ def get_currencies(url):
 
 
 def rate_in_currencies_week():
-	urls = []
+	dates = []
 	for i in xrange(0,n_days_ago):
 		date_n_days_ago = datetime.now().date() - timedelta(days=i)
-		urls.append(base_url+ str(date_n_days_ago))
-	return urls
+		dates.append(date_n_days_ago)
+	return dates #7 dates
 
 def	convert_quote(real_quotes, any_quotes):
 	converted_quote = real_quotes/any_quotes
 	return converted_quote
-
 
 @app.route('/') 
 def index():
 	converted_real = []
 	converted_euro = []
 	converted_peso = []
-	week_array = rate_in_currencies_week()
+	week_array = (rate_in_currencies_week())
+		
+	#create an url with 1 day at loop
 	for day in week_array:
-		dictonary_of_currencies = get_currencies(day)
+		dictonary_of_currencies = get_currencies(base_url+str(day))
 		real = (dictonary_of_currencies[brazilian_real])
 		euro = (dictonary_of_currencies[european_euro])
 		peso = (dictonary_of_currencies[argentine_peso])
-		converted_real.append(real)
-		converted_euro.append(convert_quote(real,euro))
-		converted_peso.append(convert_quote(real,peso))
+
+		converted_real.append([day,real])
+		converted_euro.append([day,convert_quote(real,euro)])
+		converted_peso.append([day,convert_quote(real,peso)])
 
 	return render_template('index.html', converted_real=converted_real, converted_euro=converted_euro, converted_peso=converted_peso)
 
