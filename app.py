@@ -40,6 +40,7 @@ def	convert_quote(real_quotes, any_quotes):
 	converted_quote = real_quotes/any_quotes
 	return converted_quote
 
+
 @app.route('/') 
 def index():
 	converted_real = []

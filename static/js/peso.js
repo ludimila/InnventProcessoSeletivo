@@ -1,7 +1,12 @@
-$(function () {
-    $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=usdeur.json&callback=?', function (data) {
+var data_peso = []
 
-        Highcharts.chart('container', {
+function week_peso(week_currency) {
+    data_peso = week_currency
+}
+
+
+$(function () {
+        Highcharts.chart('peso', {
             chart: {
                 zoomType: 'x'
             },
@@ -53,8 +58,7 @@ $(function () {
             series: [{
                 type: 'area',
                 name: 'USD to EUR',
-                data: data
+                data: data_peso
             }]
         });
     });
-});
