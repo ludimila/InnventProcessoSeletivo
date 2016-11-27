@@ -14,8 +14,8 @@ european_euro = 'USDEUR'
 argentine_peso = 'USDARS'
 n_days_ago = 7
 
-def get_currencies():
-	query = base_url
+def get_currencies(url):
+	query = url
 	try:
 	    response = requests.get(query)
 	    if response.status_code != 200:
@@ -30,18 +30,44 @@ def get_currencies():
 
 
 def rate_in_currencies_week():
-	# currency = (dictionary_of_currency[currency_country])
+	urls = []
 	for i in xrange(0,n_days_ago):
 		date_n_days_ago = datetime.now().date() - timedelta(days=i)
-		print(base_url+ str(date_n_days_ago))
-	return str(date_n_days_ago)
+		urls.append(base_url+ str(date_n_days_ago))
+	return urls
+
+def	convert_quote(real_quotes, any_quotes):
+	converted_quote = real_quotes/any_quotes
+	return converted_quote
 
 
 @app.route('/') 
 def index():
-	dictonary_of_currencies = get_currencies()
-	real = (dictonary_of_currencies[brazilian_real])
-	euro = (dictonary_of_currencies[european_euro])
-	peso = (dictonary_of_currencies[argentine_peso])
-	rate_in_currencies_week()
-	return render_template('index.html')
+	converted_real = []
+	converted_euro = []
+	converted_peso = []
+	week_array = rate_in_currencies_week()
+	for day in week_array:
+		dictonary_of_currencies = get_currencies(day)
+		real = (dictonary_of_currencies[brazilian_real])
+		euro = (dictonary_of_currencies[european_euro])
+		peso = (dictonary_of_currencies[argentine_peso])
+		converted_real.append(real)
+		converted_euro.append(convert_quote(real,euro))
+		converted_peso.append(convert_quote(real,peso))
+
+	return render_template('index.html', converted_real=converted_real, converted_euro=converted_euro, converted_peso=converted_peso)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
