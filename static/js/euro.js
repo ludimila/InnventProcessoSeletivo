@@ -17,12 +17,12 @@ $(function () {
                     [1, 'rgba(62, 62, 65, 0.4)']
                     ]
                 },
-                            plotBorderColor: '#606063'
+                plotBorderColor: '#606063'
 
             },
 
             title: {
-                text: 'BRL to EUR exchange rate over time',
+                text: 'EUR to BRL exchange rate over time',
                 style: {
                  color: '#E0E0E3',
                  fontSize: '20px'
