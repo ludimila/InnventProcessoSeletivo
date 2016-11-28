@@ -3,6 +3,16 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+
+.usa {
+    background-image: url('/static/img/usa.jpg');
+}
+.arg {
+    background-image: url('/static/img/argentina.jpg');
+}
+.eur {
+    background-image: url('/static/img/europe.jpg');
+}
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
