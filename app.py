@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 app = Flask(__name__)
 
 #constantes
-base_url = 'http://apilayer.net/api/historical?access_key=baf8800f7ce3994c54b6d234998d3118&currencies=BRL,EUR,ARS&format=1&date='
+base_url = 'http://apilayer.net/api/historical?access_key=7972a57131ff1ad5ef572f821367aaa7&currencies=BRL,EUR,ARS&format=1&date='
 brazilian_real = 'USDBRL'
 european_euro = 'USDEUR'
 argentine_peso = 'USDARS'
@@ -39,7 +39,6 @@ def rate_in_currencies_week():
 def	convert_quote(real_quotes, any_quotes):
 	converted_quote = real_quotes/any_quotes
 	return converted_quote
-
 
 @app.route('/') 
 def index():

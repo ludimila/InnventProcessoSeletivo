@@ -1,45 +1,94 @@
 var data_peso = []
 
 function week_peso(week_currency) {
-    data_peso = week_currency
+    data_peso = week_currency.reverse()
 }
 
 
 $(function () {
-        Highcharts.chart('peso', {
-            chart: {
-                zoomType: 'x'
+          Highcharts.chart('peso', {
+             chart: {
+                zoomType: 'x',
+
+                 backgroundColor: {
+                    linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+                    stops: [
+                    [0, 'rgba(43, 43, 44, 0.4)'],
+                    [1, 'rgba(62, 62, 65, 0.4)']
+                    ]
+                },
+                            plotBorderColor: '#606063'
+
             },
+
             title: {
-                text: 'USD to EUR exchange rate over time'
+                text: 'BRL to ARS exchange rate over time',
+                style: {
+                 color: '#E0E0E3',
+                 fontSize: '20px'
+                 }
             },
             subtitle: {
                 text: document.ontouchstart === undefined ?
-                        'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+                        'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in',
+                style: {
+                    color: '#E0E0E3',
+                 }
             },
+          
             xAxis: {
-                type: 'datetime'
-            },
-            yAxis: {
+                categories: ['Dia 01', 'Dia 02', 'Dia 03', 'Dia 04', 'Dia 05', 'Dia 06',
+                'Hoje'],
+                gridLineColor: '#707073',
+                labels: {
+                    style: {
+                    color: '#E0E0E3'
+                    }
+                },
+                lineColor: '#E0E0E3',
+                minorGridLineColor: '#505053',
+                tickColor: '#E0E0E3',
                 title: {
-                    text: 'Exchange rate'
+                    style: {
+                        color: '#A0A0A3'
+
+                    }
                 }
             },
+            yAxis: {
+                  gridLineColor: '#E0E0E3',
+                  labels: {
+                     style: {
+                        color: '#E0E0E3'
+                     }
+                  },
+                  color: '#E0E0E3',
+                  minorGridLineColor: '#505053',
+                  tickColor: '#707073',
+                  tickWidth: 1,
+                  title: {
+                     style: {
+                        color: '#E0E0E3'
+                     }
+                  }
+               },
+
             legend: {
                 enabled: false
             },
+
             plotOptions: {
                 area: {
                     fillColor: {
                         linearGradient: {
                             x1: 0,
                             y1: 0,
-                            x2: 0,
+                            x2: 1,
                             y2: 1
                         },
                         stops: [
-                            [0, Highcharts.getOptions().colors[0]],
-                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                            [0, 'rgba(43, 43, 44, 0.9)'],
+                            [1, 'rgba(62, 62, 65, 0.9)']
                         ]
                     },
                     marker: {
@@ -52,12 +101,21 @@ $(function () {
                         }
                     },
                     threshold: null
-                }
+                },
+                series: {
+                    marker: {
+                        lineColor: '#white'
+                    },
+                    dataLabels: {
+                    color: '#white'
+                    }
+                },
             },
 
             series: [{
                 type: 'area',
-                name: 'USD to EUR',
+                color: '#E0E0E3',
+                name: 'BRL to ARS',
                 data: data_peso
             }]
         });
