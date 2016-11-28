@@ -7,13 +7,15 @@ from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
-#constantes
+#const
 base_url = 'http://apilayer.net/api/historical?access_key=7972a57131ff1ad5ef572f821367aaa7&currencies=BRL,EUR,ARS&format=1&date='
 brazilian_real = 'USDBRL'
 european_euro = 'USDEUR'
 argentine_peso = 'USDARS'
 n_days_ago = 7
 
+
+#get dictionary of currencies and your quotes
 def get_currencies(url):
 	query = url
 	try:
@@ -29,6 +31,8 @@ def get_currencies(url):
 	    sys.exit(1)
 
 
+
+#Get 7 past days from today
 def rate_in_currencies_week():
 	dates = []
 	for i in xrange(0,n_days_ago):
@@ -36,6 +40,8 @@ def rate_in_currencies_week():
 		dates.append(date_n_days_ago)
 	return dates #7 dates
 
+
+#Convert quote from real to any currencie
 def	convert_quote(real_quotes, any_quotes):
 	converted_quote = real_quotes/any_quotes
 	return converted_quote
